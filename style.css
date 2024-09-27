@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p{
+    opacity: 70%;
+    font-size: 1.5rem;
+  }
+
+
+.grid-container {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: grid;
+  grid-template-rows: 500px 300px 500px 300px 500px 300px 300px 300px;
+  row-gap: 1rem;
+  grid-template-areas:
+    "header"
+    "main-desc"
+    "desktop"
+    "access"
+    "tablet"
+    "main-desc1"
+    "service-items"
+    "company";
+}
+
+
+header {
+  grid-area: header;
+  background-image: url(./images/bg-header-desktop.png);
+  background-position: top right; 
+  background-blend-mode: saturation;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-size: auto 100%;
+
+
+  img{
+    width: 100px;
+  }
+  
+  .buttons{
+    
+    :nth-child(1){
+        background-color: aquamarine;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+
+    }
+    :nth-child(2){
+        background-color: rgb(79, 82, 169);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+
+
+    }
+  }
+}
+
+.main-desc {
+  grid-area: main-desc;
+  text-align: center;
+  margin: auto 0;
+  h2{
+    padding: 2rem;
+  }
+  
+}
+.desktop {
+  grid-area: desktop;
+  display: flex;
+  justify-content: space-between;
+
+.desktop-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    h3{
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    .desktop-item{
+        width: 50%;
+    }
+  }
+}
+.access {
+  grid-area: access;
+}
+.tablet {
+  grid-area: tablet;
+  margin: 0 auto;
+}
+.main-desc1 {
+  grid-area: main-desc1;
+  text-align: center;
+    margin: auto 0;
+    h2{
+        padding: 2rem;
+      }
+}
+.service-items {
+  grid-area: service-items;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  .item{
+   display: flex;
+   flex-direction:column ;
+   justify-content: space-around;
+   align-items: center;
+   height: 80%;
+
+   h3{
+    font-size: 1.5rem;
+   }
+   
+  }
+
+}
+.company {
+  grid-area: company;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
